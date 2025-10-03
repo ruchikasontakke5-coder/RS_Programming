@@ -1,0 +1,16 @@
+// Program 42: Binary to Decimal
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int binary, decimal = 0, base = 1, rem;
+    printf("Enter binary number: ");
+    scanf("%d", &binary);
+    while(binary > 0) {
+        rem = binary % 10;
+        decimal += rem * base;
+        base *= 2;
+        binary /= 10;
+    }
+    printf("Decimal = %d", decimal);
+    return 0;
+}
