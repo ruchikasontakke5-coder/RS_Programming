@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n, rev = 0, temp, r;
+    scanf("%d", &n);
+    temp = n;
+    for (; n != 0; n /= 10) {
+        r = n % 10;
+        rev = rev * 10 + r;
+    }
+    if (rev == temp)
+        printf("Palindrome");
+    else
+        printf("Not Palindrome");
+    return 0;
+}
