@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int n, sum = 0, r, temp;
+    scanf("%d", &n);
+    temp = n;
+    for(; n > 0; n /= 10) {
+        r = n % 10;
+        sum += r * r * r;
+    }
+    if(temp == sum)
+        printf("Armstrong");
+    else
+        printf("Not Armstrong");
+    return 0;
+}
